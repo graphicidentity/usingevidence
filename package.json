@@ -1,0 +1,10 @@
+{
+  "name": "usingevidence-site",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "scripts": {
+    "build": "eleventy"
+  }
+}

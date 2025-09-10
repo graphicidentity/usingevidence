@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Local Knowledge Matters",
+    "year": 2018,
+    "type": "Book",
+    "publisher": "Policy Press",
+    "links": [
+      {
+        "label": "Publisher",
+        "url": "https://policypress.co.uk"
+      },
+      {
+        "label": "Indonesian PDF",
+        "url": "https://usingevidence.com/publications/"
+      }
+    ]
+  },
+  {
+    "title": "Knowledge to Policy: Making the Most of Development Research",
+    "year": 2009,
+    "type": "Book",
+    "publisher": "Sage & IDRC",
+    "links": [
+      {
+        "label": "Download PDF",
+        "url": "https://usingevidence.com/wp-content/uploads/2015/12/Knowledge_to_Policy__Making_the_Most_of_Development_Research_by_Fred_Beck_Carden_at_Using_Evidence_Inc.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Outcome Mapping",
+    "year": 2001,
+    "type": "Book",
+    "publisher": "IDRC",
+    "links": [
+      {
+        "label": "Download PDF",
+        "url": "https://usingevidence.com/wp-content/uploads/2015/12/Outcome_Mapping_Building_Learning_and_Reflection_Into_Development_Programs_by_Fred_Beck_Carden_at_Using_Evidence_Inc.pdf"
+      }
+    ]
+  },
+  {
+    "title": "R2HC Impact Evaluation",
+    "year": 2023,
+    "type": "Evaluation Report",
+    "publisher": "Elrha",
+    "links": [
+      {
+        "label": "Read more",
+        "url": "https://www.elrha.org"
+      }
+    ]
+  },
+  {
+    "title": "RQ+ 4 Co\u2011Pro (Protocol)",
+    "year": 2023,
+    "type": "Article/Protocol",
+    "publisher": "Health Policy and Systems / Using Evidence",
+    "links": [
+      {
+        "label": "Protocol PDF",
+        "url": "https://usingevidence.com/wp-content/uploads/2023/08/s12961-023-00990-y-2.pdf"
+      }
+    ]
+  }
+]
