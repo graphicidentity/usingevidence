@@ -1,0 +1,14 @@
+<h1>Using Evidence — One-click Eleventy + Bootstrap + Pages</h1>
+<p><strong>This repo is pre-configured to build on GitHub Pages.</strong></p>
+<h2>Run locally</h2>
+<pre><code class="language-bash">npm install
+npm run build
+npx @11ty/eleventy --serve   # optional dev server
+</code></pre>
+<h2>Deploy on GitHub Pages</h2>
+<ul>
+<li>Push to <code>main</code>. Workflow builds with <code>npm install</code> and deploys to Pages.</li>
+<li>Internal links use Eleventy's <code>| url</code> filter and <code>.eleventy.js</code> sets <code>pathPrefix</code> from <code>PATH_PREFIX</code>.</li>
+<li>Dark-mode toggle persists in <code>localStorage</code> (key: <code>bs-theme</code>).</li>
+</ul>
+<p>Generated September 09, 2025.</p>

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Primary">
+  <div class="container">
+    <a class="navbar-brand site-brand fw-semibold" href="{{ '/' | url }}">
+      <i class="bi bi-compass" aria-hidden="true"></i> Using Evidence
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="primaryNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="{{ '/' | url }}" aria-current="page">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/publications/' | url }}">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/blog/' | url }}">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/resources/' | url }}">Resources</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/about/' | url }}">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/contact/' | url }}">Contact</a></li>
+      </ul>
+      <div class="ms-lg-3">
+        <button class="btn btn-outline-secondary" type="button" onclick="toggleTheme()" aria-pressed="false" aria-label="Toggle color mode">
+          <i id="themeIcon" class="bi bi-moon" aria-hidden="true"></i>
+          <span class="visually-hidden">Toggle color mode</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+(function() {
+  var links = document.querySelectorAll('#primaryNav .nav-link');
+  var path = location.pathname.replace(/\/?index\.html$/, '/');
+  links.forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && (href === path || (href !== '{{ '/' | url }}' && path.startsWith(new URL(href, location.origin).pathname)))) {
+      a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
+    }
+  });
+})();
+</script>

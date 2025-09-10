@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resources</title>
+    <meta name="description" content="Clients and partnerships, videos, and other helpful links.">
+    <link rel="canonical" href="/resources/">
+
+    <!-- Bootstrap CSS (5.3.8) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- Bootstrap Icons (1.13.1) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+
+    <script>
+      // Bootstrap color mode: persist preference in localStorage
+      (function() {
+        const stored = localStorage.getItem('bs-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+        window.toggleTheme = function() {
+          const current = document.documentElement.getAttribute('data-bs-theme');
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-bs-theme', next);
+          localStorage.setItem('bs-theme', next);
+          const icon = document.getElementById('themeIcon');
+          if (icon) icon.className = next === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
+        };
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link btn btn-outline-secondary m-2" href="#main-content">Skip to main content</a>
+
+    <header class="border-bottom">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Primary">
+  <div class="container">
+    <a class="navbar-brand site-brand fw-semibold" href="/">
+      <i class="bi bi-compass" aria-hidden="true"></i> Using Evidence
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="primaryNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/" aria-current="page">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/publications/">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="/resources/">Resources</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+      </ul>
+      <div class="ms-lg-3">
+        <button class="btn btn-outline-secondary" type="button" onclick="toggleTheme()" aria-pressed="false" aria-label="Toggle color mode">
+          <i id="themeIcon" class="bi bi-moon" aria-hidden="true"></i>
+          <span class="visually-hidden">Toggle color mode</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+(function() {
+  var links = document.querySelectorAll('#primaryNav .nav-link');
+  var path = location.pathname.replace(/\/?index\.html$/, '/');
+  links.forEach(function(a) {
+    var href = a.getAttribute('href');
+    if (href && (href === path || (href !== '/' && path.startsWith(new URL(href, location.origin).pathname)))) {
+      a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
+    }
+  });
+})();
+</script>
+
+    </header>
+
+    <main id="main-content" class="container py-4 prose">
+      <header class="mb-4">
+        <h1 class="display-5">Resources</h1>
+      </header>
+
+      <div class="row g-4">
+  <div class="col-lg-6">
+    <h2 class="h4">Clients (selected)</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Global Affairs Canada</li>
+      <li class="list-group-item">Green Climate Fund</li>
+      <li class="list-group-item">International Development Research Centre (IDRC)</li>
+      <li class="list-group-item">International Confederation of Midwives (ICM)</li>
+      <li class="list-group-item">IUCN</li>
+      <li class="list-group-item">MasterCard Foundation</li>
+      <li class="list-group-item">National Research Council (Canada)</li>
+      <li class="list-group-item">Ontario Brain Institute</li>
+      <li class="list-group-item">UK Aid / Department for International Development</li>
+      <li class="list-group-item">UNESCO Montevideo Office</li>
+      <li class="list-group-item">World Health Organization (QNS Department)</li>
+    </ul>
+  </div>
+  <div class="col-lg-6">
+    <h2 class="h4">Partnerships (selected)</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Capability (Finland) · Demos Helsinki · Helvetas · Politics &amp; Ideas · Southern Voice</li>
+      <li class="list-group-item">Cindy Weeks Consulting (Rideau Hall Foundation)</li>
+      <li class="list-group-item">EnCompass LLC (UN Women)</li>
+      <li class="list-group-item">Itad (Global Challenges Research Fund)</li>
+      <li class="list-group-item">Knowledge Sector Initiative (RTI International for DFAT Australia)</li>
+      <li class="list-group-item">ORS‑Impact (Bill &amp; Melinda Gates Foundation)</li>
+      <li class="list-group-item">Sambodhi Research and Communications (Bill &amp; Melinda Gates Foundation)</li>
+      <li class="list-group-item">Universalia Management Group (FAO)</li>
+      <li class="list-group-item">University of the Witwatersrand &amp; UNESCO Futures Literacy Program (IDRC)</li>
+    </ul>
+  </div>
+</div>
+<h2 class="h4 mt-4">Videos</h2>
+<div class="row row-cols-1 row-cols-md-2 g-3">
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="fs-6 card-title">Role of institutions for transformation (2020)</h3>
+      </div>
+      <div class="card-footer bg-transparent border-0">
+        <a class="btn btn-sm btn-outline-primary" href="https://bluemarbleeval.org/latest/role-institutions-transformation-global-south">Watch</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="fs-6 card-title">UNESCO MOOC modules (2017–2018)</h3>
+      </div>
+      <div class="card-footer bg-transparent border-0">
+        <a class="btn btn-sm btn-outline-primary" href="https://www.futurelearn.com/courses/desigualdades-america-latina/1/steps/266622">Watch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="bg-body-tertiary border-top mt-5 py-4">
+      <div class="container">
+        <div class="row gy-2 align-items-center">
+  <div class="col-md">
+    <p class="mb-0"><strong>Using Evidence Inc.</strong></p>
+    <p class="mb-0">
+      <i class="bi bi-telephone" aria-hidden="true"></i>
+      <span class="visually-hidden">Phone:</span>
+      <a href="tel:+16132528642">+1&nbsp;613‑252‑8642</a>
+      <span class="text-body-secondary mx-2">·</span>
+      <i class="bi bi-envelope" aria-hidden="true"></i>
+      <span class="visually-hidden">Email:</span>
+      <a href="mailto:fred@usingevidence.com">fred@usingevidence.com</a>
+    </p>
+  </div>
+  <div class="col-md text-md-end text-body-secondary">
+    <small>© 2025 Using Evidence Inc. · Built with Eleventy & Bootstrap · September 09, 2025</small>
+  </div>
+</div>
+
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>

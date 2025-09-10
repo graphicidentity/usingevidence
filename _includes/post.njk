@@ -1,0 +1,15 @@
+---
+# layout for individual blog posts
+---
+<article class="post">
+  <header class="mb-3">
+    <p class="text-body-secondary mb-1">{{ date | formatDateISO }}</p>
+    <h1 class="h2">{{ title }}</h1>
+    {% if external_url %}
+      <p><a class="btn btn-primary btn-sm" href="{{ external_url }}">Read the full article</a></p>
+    {% endif %}
+  </header>
+  <div class="content">
+    {{ content | safe }}
+  </div>
+</article>
