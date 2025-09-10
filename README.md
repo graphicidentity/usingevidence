@@ -5,8 +5,9 @@
 ## Run locally
 ```bash
 npm install
-npm run build
-npx @11ty/eleventy --serve   # optional dev server
+npm run build         # Build the site to _site/
+npm run start         # Build and serve with dev server
+npm run dev           # Build, serve, and watch for changes
 ```
 
 ## Deploy on GitHub Pages
