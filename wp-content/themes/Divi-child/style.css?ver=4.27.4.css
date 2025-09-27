@@ -1,0 +1,172 @@
+/*
+Theme Name:   Divi child theme
+Theme URI:    http://www.elegantthemes.com/gallery/divi/
+Description:  Basic child theme
+Author:       Bowo
+Author URI:   http://about.me/bowo
+Template:     Divi
+Version:      v1.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  divi_child
+*/
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+body {
+	background-color: #000;
+}
+
+.home-hero img {
+	width: auto;
+	height: 96px;
+}
+
+.home-hero p, .about-hero p {
+	font-weight: 300;
+	line-height: 1.4;
+}
+
+.section-title h1, .publications-hero h1, .resources-hero h1, .about-hero h1 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.featured-publication h2, .publications h2, .resources h2, .cv h2, .about h2 {
+	text-transform: uppercase;
+	font-weight: bold;	
+}
+
+.featured-publication h4, .about h4 {
+	font-size: 20px;
+	margin-bottom: 1.5em;
+}
+
+.book-covers {
+	margin-top: 1em;
+}
+
+.book-covers img {
+	width: 280px;
+	height: auto;
+	margin-bottom: 1em;
+}
+
+.publications-intro p, .resources-intro p, .cv-intro p {
+}
+
+.publication-title, .resource-title {
+	font-weight: bold;
+}
+
+.publication-context {
+	font-style: italic;
+}
+
+.entry-content table.tablepress {
+	border: 0;
+	margin-top: 0.5em;
+	margin-bottom: 2.5em;
+}
+
+.tablepress tbody tr:first-child td {
+	border-top: 1px solid #ddd !important;
+}
+
+.entry-content .tablepress tr td {
+	padding: 0.5em 1em 0.5em 0;
+}
+
+.tablepress tbody td {
+	border-top: 0;
+}
+
+#main-footer {
+	background-color: #000;
+}
+
+/* Divi mods */
+
+.et_pb_bg_layout_light .et_pb_promo_button:hover {
+	border: 2px solid #666;
+	padding: 0.3em 2em 0.3em 1em !important;
+}
+
+.et_pb_bg_layout_dark .et_pb_promo_button:hover {
+	border: 2px solid #FFF;
+	padding: 0.3em 2em 0.3em 1em !important;
+}
+
+/* END OF --- Divi mods */
+
+/************* Media Queries *************/
+
+@media only screen and ( min-width: 1405px ) {
+
+}
+
+/*-------------------[1080px]------------------*/
+@media only screen and ( min-width: 1100px ) and ( max-width: 1405px) {
+}
+
+@media only screen and ( min-width: 1200px ) {
+
+}
+
+@media only screen and ( min-width: 1100px ) {
+
+}
+
+@media only screen and ( min-width: 981px ) and ( max-width: 1405px) {
+
+}
+
+@media only screen and ( min-width: 981px ) {
+
+	.home-hero {
+		min-height: 720px;	
+	}
+
+	.publications-hero, .resources-hero, .about-hero {
+		min-height: 480px;
+	}
+
+	.home-hero img {
+		margin-top: 13em;
+	}
+
+	.about {
+		min-height: 720px;	
+	}
+
+}
+
+/*-------------------[960px]------------------*/
+@media only screen and ( min-width: 981px ) and ( max-width: 1100px ) {
+
+}
+
+/*-------------------[768px]------------------*/
+@media only screen and ( max-width: 980px ) {
+
+}
+
+@media only screen and ( min-width: 768px ) and ( max-width: 980px ) {
+
+}
+
+@media screen and ( max-width: 782px ) {
+
+}
+
+/*-------------------[480px]------------------*/
+@media only screen and ( max-width: 767px ) {
+
+}
+
+/*-------------------[320px]------------------*/
+@media only screen and ( max-width: 479px ) {
+
+}
