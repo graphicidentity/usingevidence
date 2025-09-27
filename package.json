@@ -4,13 +4,8 @@
   "description": "UsingEvidence - Making Evaluation Useful and Useable",
   "main": "index.js",
   "scripts": {
-  "dev": "npm-run-all --parallel eleventy:serve parcel:watch",
-  "build": "npm-run-all eleventy:build parcel:build",
-  "eleventy:build": "eleventy",
-  "eleventy:serve": "eleventy --serve",
-  "parcel:watch": "parcel watch src/css/main.scss --dist-dir _site/css",
-  "parcel:build": "parcel build src/css/main.scss --dist-dir _site/css"
     "start": "eleventy --serve",
+    "build": "eleventy",
     "debug": "DEBUG=Eleventy* eleventy"
   },
   "keywords": [
