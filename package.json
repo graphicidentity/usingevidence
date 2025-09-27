@@ -1,0 +1,17 @@
+{
+  "name": "usingevidence",
+  "version": "1.0.0",
+  "description": "UsingEvidence - Making Evaluation Useful and Useable",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "keywords": ["research", "evaluation", "consultancy"],
+  "author": "UsingEvidence",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
