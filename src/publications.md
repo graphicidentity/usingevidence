@@ -4,33 +4,59 @@ title: "Publications"
 description: "Research publications and resources from UsingEvidence"
 ---
 
-<section class="publications-hero">
-    <div class="content-section">
-        <h1>Publications</h1>
-        <p>Our research publications and resources that contribute to the field of evaluation and development.</p>
+<div class="publications-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="display-5 text-primary mb-3">Publications</h1>
+                <p class="lead">Our research publications and resources that contribute to the field of evaluation and development.</p>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 
-<section class="content-section publications">
-    <h2>Featured Publications</h2>
-    
-    <div class="featured-publication">
-        <h4>Evaluating Research Co-production</h4>
-        <p class="publication-context">Research Quality Plus for Co-Production Framework</p>
-        <p>A comprehensive framework for evaluating research co-production initiatives.</p>
-    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <section class="content-section">
+                <h2 class="h4 text-primary mb-4">Featured Publications</h2>
+                
+                <div class="featured-publication">
+                    <h3 class="h5 mb-2">Evaluating Research Co-production</h3>
+                    <p class="publication-context">Research Quality Plus for Co-Production Framework</p>
+                    <p>A comprehensive framework for evaluating research co-production initiatives.</p>
+                </div>
 
-    <h2>Recent Publications</h2>
-    
-    <div class="publication-list">
-        <div class="publication-item">
-            <p class="publication-title">Making Evaluation Useful and Useable</p>
-            <p class="publication-context">Key principles for effective evaluation practice</p>
+                <h2 class="h4 text-primary mb-4">Recent Publications</h2>
+                
+                <div class="publication-list">
+                    <div class="publication-item">
+                        <h4 class="publication-title h6">Making Evaluation Useful and Useable</h4>
+                        <p class="publication-context">Key principles for effective evaluation practice</p>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <h4 class="publication-title h6">Development Research Evaluation</h4>
+                        <p class="publication-context">Approaches to evaluating development interventions</p>
+                    </div>
+                </div>
+            </section>
         </div>
         
-        <div class="publication-item">
-            <p class="publication-title">Development Research Evaluation</p>
-            <p class="publication-context">Approaches to evaluating development interventions</p>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title h6 text-primary">Resources</h3>
+                    <p class="card-text small">Access our evaluation frameworks, tools, and guidance materials.</p>
+                </div>
+            </div>
+            
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h3 class="card-title h6 text-primary">Contact</h3>
+                    <p class="card-text small">Interested in our research or evaluation services? Get in touch to discuss your needs.</p>
+                </div>
+            </div>
         </div>
     </div>
-</section>
+</div>

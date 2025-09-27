@@ -4,26 +4,60 @@ title: "Clients and Partnerships"
 description: "Our client relationships and partnership approach at UsingEvidence"
 ---
 
-<section class="about-hero">
-    <div class="content-section">
-        <h1>Clients and Partnerships</h1>
-        <p>Building meaningful relationships to enhance evaluation practice and research impact.</p>
+<div class="about-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="display-5 text-primary mb-3">Clients and Partnerships</h1>
+                <p class="lead">Building meaningful relationships to enhance evaluation practice and research impact.</p>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 
-<section class="content-section about">
-    <h2>Our Approach</h2>
-    <p>We work collaboratively with clients to develop evaluation strategies that are both rigorous and practical. Our partnership approach ensures that evaluation findings are actionable and contribute to organizational learning and improvement.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <section class="content-section">
+                <h2 class="h4 text-primary mb-3">Our Approach</h2>
+                <p>We work collaboratively with clients to develop evaluation strategies that are both rigorous and practical. Our partnership approach ensures that evaluation findings are actionable and contribute to organizational learning and improvement.</p>
 
-    <h2>Client Sectors</h2>
-    <ul>
-        <li>International Development Organizations</li>
-        <li>Non-profit Organizations</li>
-        <li>Government Agencies</li>
-        <li>Research Institutions</li>
-        <li>Academic Partners</li>
-    </ul>
+                <h2 class="h4 text-primary mb-3">Client Sectors</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0 px-0">International Development Organizations</li>
+                            <li class="list-group-item border-0 px-0">Non-profit Organizations</li>
+                            <li class="list-group-item border-0 px-0">Government Agencies</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0 px-0">Research Institutions</li>
+                            <li class="list-group-item border-0 px-0">Academic Partners</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <h2>Partnership Philosophy</h2>
-    <p>We believe in building long-term relationships based on mutual respect, shared learning, and a commitment to improving evaluation practice. Our partnerships extend beyond individual projects to contribute to the broader evaluation community.</p>
-</section>
+                <h2 class="h4 text-primary mb-3">Partnership Philosophy</h2>
+                <p>We believe in building long-term relationships based on mutual respect, shared learning, and a commitment to improving evaluation practice. Our partnerships extend beyond individual projects to contribute to the broader evaluation community.</p>
+            </section>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title h6 text-primary">About Fred</h3>
+                    <p class="card-text small">Learn more about our founder and principal consultant, including experience and expertise in evaluation practice.</p>
+                </div>
+            </div>
+            
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h3 class="card-title h6 text-primary">Get in Touch</h3>
+                    <p class="card-text small">Ready to discuss your evaluation needs? Contact us to explore how we can work together.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
