@@ -1,0 +1,266 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5em;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Layout */
+.nav-container,
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.site-main {
+    min-height: calc(100vh - 200px);
+}
+
+/* Navigation */
+.site-header {
+    background-color: #000;
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-home {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #82c0c7;
+}
+
+/* Hero sections */
+.home-hero, .about-hero, .publications-hero, .resources-hero {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.home-hero {
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.publications-hero, .resources-hero, .about-hero {
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-hero img {
+    width: auto;
+    height: 96px;
+    margin-bottom: 2rem;
+}
+
+.home-hero p, .about-hero p {
+    font-weight: 300;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title h1, .publications-hero h1, .resources-hero h1, .about-hero h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Content sections */
+.content-section {
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.featured-publication, .publications, .resources, .cv, .about {
+    background-color: #fff;
+    color: #333;
+}
+
+.featured-publication h2, .publications h2, .resources h2, .cv h2, .about h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+}
+
+.featured-publication h4, .about h4 {
+    font-size: 20px;
+    margin-bottom: 1.5em;
+}
+
+/* Publications and resources */
+.book-covers {
+    margin-top: 1em;
+}
+
+.book-covers img {
+    width: 280px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.publication-title, .resource-title {
+    font-weight: bold;
+}
+
+.publication-context {
+    font-style: italic;
+}
+
+/* Tables */
+.tablepress {
+    border: 0;
+    margin-top: 0.5em;
+    margin-bottom: 2.5em;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tablepress tbody tr:first-child td {
+    border-top: 1px solid #ddd !important;
+}
+
+.tablepress tr td {
+    padding: 0.5em 1em 0.5em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.tablepress tbody td {
+    border-top: 0;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .home-hero {
+        min-height: 480px;
+        padding: 2rem 1rem;
+    }
+    
+    .publications-hero, .resources-hero, .about-hero {
+        min-height: 320px;
+        padding: 2rem 1rem;
+    }
+    
+    .home-hero img {
+        height: 64px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+    .content-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .home-hero {
+        min-height: 720px;
+    }
+    
+    .publications-hero, .resources-hero, .about-hero {
+        min-height: 480px;
+    }
+    
+    .home-hero img {
+        margin-top: 13em;
+    }
+    
+    .about {
+        min-height: 720px;
+    }
+}

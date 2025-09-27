@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <title>{% if title %}{{ title }} - {% endif %}UsingEvidence</title>
+    <meta name="description" content="{% if description %}{{ description }}{% else %}Using Evidence is a research and evaluation consultancy that focuses on development and research evaluation. We explore ways to enhance the use of results.{% endif %}">
+    
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="{% if og_type %}{{ og_type }}{% else %}website{% endif %}">
+    <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}UsingEvidence">
+    <meta property="og:description" content="{% if description %}{{ description }}{% else %}Using Evidence is a research and evaluation consultancy that focuses on development and research evaluation. We explore ways to enhance the use of results.{% endif %}">
+    <meta property="og:site_name" content="UsingEvidence">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <script>
+        document.documentElement.className = 'js';
+    </script>
+</head>
+<body class="{% if page.url == '/' %}home{% endif %}">
+    <header class="site-header">
+        <nav class="site-nav">
+            <div class="nav-container">
+                <a href="/" class="nav-home">UsingEvidence</a>
+                <ul class="nav-menu">
+                    <li><a href="/publications/">Publications</a></li>
+                    <li><a href="/clients-and-partnerships/">Clients & Partnerships</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2024 UsingEvidence. Making Evaluation Useful and Useable.</p>
+        </div>
+    </footer>
+</body>
+</html>
