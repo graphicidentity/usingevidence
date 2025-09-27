@@ -1,6 +1,10 @@
 /* Custom styles for UsingEvidence site */
 /* Bootstrap is loaded via CDN in the HTML head */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding-top: 2rem;
 }
