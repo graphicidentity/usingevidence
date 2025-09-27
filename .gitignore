@@ -23,5 +23,4 @@ Thumbs.db
 .env.*.local
 
 # Optional: lock files if you don’t want them in repo
-package-lock.json
 yarn.lock
