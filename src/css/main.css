@@ -2,75 +2,75 @@
    Theme Variables
    =========================== */
 
-/* Light theme (default) - Earth Toned Palette */
+/* Light theme (default) - Professional Blue-Gray Palette */
 :root,
 html[data-theme="light"] {
-  /* Core colors - Warm earth tones */
-  --primary-color: #8b7355;
-  --primary-hover: #6d5940;
-  --secondary-color: #a8956b;
-  --accent-color: #d4a574;
-  --accent-hover: #b8935f;
+  /* Core colors - Professional blue-grays */
+  --primary-color: #284b63;
+  --primary-hover: #1e3a4a;
+  --secondary-color: #3c6e71;
+  --accent-color: #3c6e71;
+  --accent-hover: #2d5356;
   
-  /* Background colors - Soft neutral tones */
-  --bg-color: #fdfcfa;
-  --secondary-bg: #f7f5f1;
+  /* Background colors - Clean neutrals */
+  --bg-color: #ffffff;
+  --secondary-bg: #f8f9fa;
   --card-bg: #ffffff;
   --nav-bg: #ffffff;
   
-  /* Text colors - Natural browns and grays */
-  --text-color: #3c3327;
-  --text-muted: #8b7355;
-  --text-light: #a8956b;
-  --heading-color: #2d2520;
+  /* Text colors - Professional grays */
+  --text-color: #353535;
+  --text-muted: #6c757d;
+  --text-light: #868e96;
+  --heading-color: #284b63;
   
-  /* Border colors - Subtle earth tones */
-  --border-color: #e6ddd4;
-  --border-light: #f0ebe4;
+  /* Border colors - Subtle grays */
+  --border-color: #d9d9d9;
+  --border-light: #e9ecef;
   
-  /* Shadow - Warmer shadows */
-  --shadow: 0 1px 3px 0 rgb(60 51 39 / 0.1), 0 1px 2px -1px rgb(60 51 39 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(60 51 39 / 0.1), 0 4px 6px -4px rgb(60 51 39 / 0.1);
+  /* Shadow - Clean shadows */
+  --shadow: 0 1px 3px 0 rgb(53 53 53 / 0.1), 0 1px 2px -1px rgb(53 53 53 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(53 53 53 / 0.1), 0 4px 6px -4px rgb(53 53 53 / 0.1);
   
   /* Hero specific */
-  --hero-overlay: rgba(45, 37, 32, 0.65);
+  --hero-overlay: rgba(40, 75, 99, 0.75);
   --hero-text: #ffffff;
-  --hero-text-muted: #f0ebe4;
+  --hero-text-muted: #e9ecef;
 }
 
-/* Dark theme - Earth Toned Palette */
+/* Dark theme - Professional Dark Blue-Gray Palette */
 html[data-theme="dark"] {
-  /* Core colors - Warm dark earth tones */
-  --primary-color: #b8a082;
-  --primary-hover: #a8956b;
-  --secondary-color: #9d8b6f;
-  --accent-color: #e6c794;
-  --accent-hover: #d4a574;
+  /* Core colors - Professional dark blues */
+  --primary-color: #5a8a93;
+  --primary-hover: #3c6e71;
+  --secondary-color: #4a7c7f;
+  --accent-color: #6ba8ac;
+  --accent-hover: #5a8a93;
   
-  /* Background colors - Rich dark earth tones */
-  --bg-color: #1a1611;
-  --secondary-bg: #2d2520;
-  --card-bg: #3c3327;
-  --nav-bg: #2d2520;
+  /* Background colors - Rich dark grays */
+  --bg-color: #1a1a1a;
+  --secondary-bg: #2a2a2a;
+  --card-bg: #353535;
+  --nav-bg: #2a2a2a;
   
-  /* Text colors - Warm light tones */
-  --text-color: #f0ebe4;
-  --text-muted: #b8a082;
-  --text-light: #9d8b6f;
-  --heading-color: #fdfcfa;
+  /* Text colors - Clean light tones */
+  --text-color: #ffffff;
+  --text-muted: #b8b8b8;
+  --text-light: #9a9a9a;
+  --heading-color: #ffffff;
   
-  /* Border colors - Subtle dark earth borders */
-  --border-color: #4a4137;
-  --border-light: #3c3327;
+  /* Border colors - Subtle dark borders */
+  --border-color: #4a4a4a;
+  --border-light: #3a3a3a;
   
-  /* Shadow - Deeper warm shadows */
+  /* Shadow - Deep clean shadows */
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.3);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
   
   /* Hero specific */
-  --hero-overlay: rgba(26, 22, 17, 0.5);
+  --hero-overlay: rgba(40, 75, 99, 0.6);
   --hero-text: #ffffff;
-  --hero-text-muted: #e6ddd4;
+  --hero-text-muted: #d9d9d9;
 }
 
 /* ===========================
@@ -184,44 +184,44 @@ a:hover {
   background-attachment: fixed;
 }
 
-/* Home Page Hero - Organic leaf pattern */
+/* Home Page Hero - Modern gradient pattern */
 body[data-page="home"] .home-hero {
   background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-              radial-gradient(circle at 25% 25%, #a8956b 0%, transparent 50%),
-              radial-gradient(circle at 75% 75%, #d4a574 0%, transparent 50%),
-              linear-gradient(135deg, #8b7355 0%, #a8956b 50%, #d4a574 100%);
+              radial-gradient(circle at 25% 25%, #3c6e71 0%, transparent 50%),
+              radial-gradient(circle at 75% 75%, #284b63 0%, transparent 50%),
+              linear-gradient(135deg, #284b63 0%, #3c6e71 50%, #353535 100%);
 }
 
-/* About Fred Page Hero - Mountain/landscape pattern */
+/* About Fred Page Hero - Professional diagonal pattern */
 body[data-page="about-fred"] .home-hero {
   background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-              linear-gradient(45deg, #6d5940 0%, transparent 25%),
-              linear-gradient(-45deg, #8b7355 25%, transparent 50%),
-              linear-gradient(135deg, #a8956b 0%, #8b7355 100%);
+              linear-gradient(45deg, #284b63 0%, transparent 25%),
+              linear-gradient(-45deg, #3c6e71 25%, transparent 50%),
+              linear-gradient(135deg, #353535 0%, #284b63 100%);
 }
 
-/* Publications Page Hero - Paper/document texture */
+/* Publications Page Hero - Clean document texture */
 body[data-page="publications"] .home-hero {
   background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-              repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(212, 165, 116, 0.1) 2px, rgba(212, 165, 116, 0.1) 4px),
-              linear-gradient(90deg, #8b7355 0%, #a8956b 50%, #d4a574 100%);
+              repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(60, 110, 113, 0.1) 2px, rgba(60, 110, 113, 0.1) 4px),
+              linear-gradient(90deg, #284b63 0%, #3c6e71 50%, #353535 100%);
 }
 
 /* Clients Page Hero - Network/connection pattern */
 body[data-page="clients-and-partnerships"] .home-hero {
   background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-              radial-gradient(circle at 20% 20%, rgba(139, 115, 85, 0.3) 1px, transparent 1px),
-              radial-gradient(circle at 80% 80%, rgba(168, 149, 107, 0.3) 1px, transparent 1px),
-              linear-gradient(120deg, #8b7355 0%, #a8956b 100%);
+              radial-gradient(circle at 20% 20%, rgba(60, 110, 113, 0.3) 1px, transparent 1px),
+              radial-gradient(circle at 80% 80%, rgba(40, 75, 99, 0.3) 1px, transparent 1px),
+              linear-gradient(120deg, #284b63 0%, #3c6e71 100%);
   background-size: 30px 30px, 40px 40px, 100% 100%;
 }
 
-/* Contact Page Hero - Geometric earth pattern */
+/* Contact Page Hero - Geometric professional pattern */
 body[data-page="contact"] .home-hero {
   background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-              linear-gradient(60deg, transparent 40%, rgba(212, 165, 116, 0.1) 40%, rgba(212, 165, 116, 0.1) 60%, transparent 60%),
-              linear-gradient(-60deg, transparent 40%, rgba(168, 149, 107, 0.1) 40%, rgba(168, 149, 107, 0.1) 60%, transparent 60%),
-              linear-gradient(45deg, #8b7355 0%, #d4a574 100%);
+              linear-gradient(60deg, transparent 40%, rgba(60, 110, 113, 0.1) 40%, rgba(60, 110, 113, 0.1) 60%, transparent 60%),
+              linear-gradient(-60deg, transparent 40%, rgba(40, 75, 99, 0.1) 40%, rgba(40, 75, 99, 0.1) 60%, transparent 60%),
+              linear-gradient(45deg, #284b63 0%, #3c6e71 100%);
   background-size: 60px 60px, 60px 60px, 100% 100%;
 }
 
@@ -386,7 +386,7 @@ body[data-page="contact"] .home-hero {
 }
 
 .accordion-button:focus {
-  box-shadow: 0 0 0 0.25rem rgba(212, 165, 116, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(60, 110, 113, 0.25);
   border-color: transparent;
 }
 
