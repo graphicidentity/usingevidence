@@ -1,65 +1,188 @@
-# UsingEvidence - 11ty Site
+# Using Evidence Website
 
-This is the official website for UsingEvidence, a research and evaluation consultancy that focuses on development and research evaluation.
+A professional website built with Eleventy (11ty) for Using Evidence Inc., a research and evaluation consultancy.
 
-## About
-
-UsingEvidence explores ways to enhance the use of results and make evaluation useful and useable.
-
-## Development
-
-This site is built with [11ty (Eleventy)](https://www.11ty.dev/), a static site generator.
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm
-
-### Setup
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
 npm install
 
-# Start development server
+# Start development server (any of these work)
 npm start
+npm run serve
+npm run dev
 
-# Build for production
+# Your site will be available at: http://localhost:8081/
+```
+
+## 📋 Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start development server |
+| `npm run serve` | Start development server (alias) |
+| `npm run dev` | Start development server (alias) |
+| `npm run build` | Build for production |
+| `npm run clean` | Clean output directory |
+| `npm run rebuild` | Clean and rebuild |
+| `npm run debug` | Build with debug info |
+| `npm run help` | Show available commands |
+
+## 🛠️ Development
+
+### Local Development
+1. **Install dependencies**: `npm install`
+2. **Start server**: `npm start` (or `npm run serve` or `npm run dev`)
+3. **Open browser**: Go to `http://localhost:8081/`
+4. **Make changes**: Files are watched and auto-rebuild
+
+### Common Issues & Solutions
+
+#### ❌ Server Won't Start
+- ✅ **Use**: `npm start`, `npm run serve`, or `npm run dev`
+- ❌ **Don't use**: `npm run server` (doesn't exist)
+- **Check**: Make sure you're in the project directory
+- **Port**: Default is 8081, check terminal output for actual port
+
+#### ❌ Navigation Links Don't Work
+- **Local development**: Links use `/` paths (e.g., `/contact/`)
+- **Production**: May need `/usingevidence/` paths depending on hosting
+- **Fix**: Update paths in `src/_layouts/base.njk` if needed
+
+#### ❌ Build Fails
+- **Clean rebuild**: `npm run rebuild`
+- **Check dependencies**: `npm install`
+- **Debug mode**: `npm run debug`
+
+#### ❌ "Missing script" Error
+- **Check spelling**: Use exact script names from package.json
+- **Run**: `npm run help` to see all available commands
+- **Most common**: Use `npm start` not `npm run start`
+
+## 📁 Project Structure
+
+```
+usingevidence/
+├── src/                    # Source files
+│   ├── _layouts/          # Page templates
+│   │   └── base.njk       # Main layout
+│   ├── _data/             # Site data
+│   ├── css/               # Stylesheets
+│   │   └── main.css       # Main CSS with theme system
+│   ├── index.njk          # Home page
+│   ├── contact.njk        # Contact page
+│   ├── publications.njk   # Publications page
+│   └── clients-and-partnerships.njk  # About Fred page
+├── _site/                 # Generated files (don't edit)
+├── node_modules/          # Dependencies (don't edit)
+├── .eleventy.js          # Eleventy configuration
+├── package.json          # Project settings & scripts
+└── README.md             # This file
+```
+
+## 🎨 Features
+
+- **Responsive Design**: Bootstrap 5 with custom CSS
+- **Dark/Light Mode**: Theme toggle with system preference detection
+- **Modern Layout**: Clean, professional design
+- **Fast Performance**: Static site generation
+- **Easy Editing**: Nunjucks templates for content management
+
+## 📄 Pages
+
+1. **Home** (`/`) - Service overview with accordion sections
+2. **About Fred** (`/clients-and-partnerships/`) - Biography and experience
+3. **Publications** (`/publications/`) - Research and publications
+4. **Contact** (`/contact/`) - Contact information and form
+
+## 🔧 Customization
+
+### Adding Content
+- Edit `.njk` files in `src/`
+- Main layout in `src/_layouts/base.njk`
+- Styles in `src/css/main.css`
+
+### Theme Colors
+- Light/dark theme variables in `main.css`
+- Bootstrap integration for components
+- Custom CSS properties for easy theming
+
+### Navigation
+- Update navigation in `src/_layouts/base.njk`
+- Ensure paths work for both local development and production
+
+## 🚀 Deployment
+
+### Build for Production
+```bash
 npm run build
 ```
 
-### Scripts
+### Deploy Files
+- Upload contents of `_site/` directory to your web server
+- Works with any static hosting (Netlify, Vercel, GitHub Pages, etc.)
+- No server-side requirements
 
-- `npm start` - Start the development server with live reload
-- `npm run build` - Build the site for production
-- `npm run debug` - Build with debug information
+### Environment-Specific Settings
+- **Local**: Uses `/` paths for navigation
+- **Production**: May need to adjust paths based on hosting setup
 
-### Project Structure
+## 📞 Troubleshooting
 
-```
-src/
-├── _layouts/          # Nunjucks templates
-├── css/              # Stylesheets
-├── assets/           # Static assets
-├── images/           # Images
-├── index.md          # Home page
-├── publications.md   # Publications page
-├── clients-and-partnerships.md  # Clients page
-└── robots.txt        # Search engine robots file
-
-_site/                # Generated site (do not edit)
+### Quick Fixes
+```bash
+# If nothing works, try these in order:
+npm run help           # See available commands
+npm install           # Reinstall dependencies
+npm run rebuild       # Clean rebuild
+npm start             # Start development server
 ```
 
-### Deployment
+### Common Error Messages
 
-The built site is in the `_site` directory after running `npm run build`. Deploy this directory to your web server.
+| Error | Solution |
+|-------|----------|
+| `Missing script: "serve"` | Use `npm start` instead |
+| `ENOENT: no such file` | Run `npm install` first |
+| `Port already in use` | Kill other processes or use different port |
+| `Module not found` | Run `npm install` to install dependencies |
 
-## Content Management
+## 🌟 Best Practices
 
-- Pages are written in Markdown with front matter
-- Templates use Nunjucks templating language
-- Styles are in vanilla CSS
+1. **Always use npm scripts** instead of running commands directly
+2. **Test locally** before deploying
+3. **Keep dependencies updated** for security
+4. **Use version control** to track changes
+5. **Back up** your work regularly
 
-## Contact
+## 📱 Mobile Development
 
-For questions about the site or UsingEvidence services, please contact us through the website.
+The site is fully responsive and includes:
+- Mobile-first CSS design
+- Touch-friendly navigation
+- Optimized images and fonts
+- Dark/light mode on mobile
+
+## 🔄 Updates
+
+To update dependencies:
+```bash
+npm update
+npm audit fix  # Fix security issues if any
+```
+
+## 💡 Tips
+
+- **Bookmark**: http://localhost:8081/ for easy access
+- **Auto-reload**: Changes save automatically refresh the browser
+- **Multiple commands**: All these work the same:
+  - `npm start`
+  - `npm run serve` 
+  - `npm run dev`
+- **Build first**: Run `npm run build` before deploying
+- **Clean slate**: Use `npm run rebuild` if things seem broken
+
+---
+
+**Need help?** Run `npm run help` in the terminal for a quick command reference!

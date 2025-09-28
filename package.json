@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
+    "serve": "npx @11ty/eleventy --serve",
+    "dev": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
+    "clean": "rm -rf _site",
+    "rebuild": "npm run clean && npm run build",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "help": "echo '\n📋 Available Commands:\n  npm start     - Start development server\n  npm run serve - Start development server (alias)\n  npm run dev   - Start development server (alias)\n  npm run build - Build for production\n  npm run clean - Clean output directory\n  npm run rebuild - Clean and rebuild\n  npm run debug - Build with debug info\n  npm run help  - Show this help\n'"
   },
   "keywords": [
     "research",
