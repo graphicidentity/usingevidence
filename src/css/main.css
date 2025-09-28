@@ -103,7 +103,7 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
       var(--hero-overlay), 
       var(--hero-overlay)
     ),
-    url('images/hero-bg.jpg') center/cover no-repeat;
+    linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: var(--hero-text);
 }
 
