@@ -6,8 +6,8 @@
 :root,
 html[data-theme="light"] {
   /* Core colors */
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
+  --primary-color: #64748b;
+  --primary-hover: #475569;
   --secondary-color: #64748b;
   --accent-color: #f59e0b;
   --accent-hover: #d97706;
@@ -41,8 +41,8 @@ html[data-theme="light"] {
 /* Dark theme */
 html[data-theme="dark"] {
   /* Core colors */
-  --primary-color: #3b82f6;
-  --primary-hover: #2563eb;
+  --primary-color: #94a3b8;
+  --primary-hover: #64748b;
   --secondary-color: #94a3b8;
   --accent-color: #fbbf24;
   --accent-hover: #f59e0b;
