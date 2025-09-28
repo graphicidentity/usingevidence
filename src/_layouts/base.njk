@@ -95,19 +95,52 @@
 
   <!-- Theme Toggle Script -->
   <script>
+    // Theme toggle functionality
     const toggleBtn = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-      document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    // Initialize theme
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      
+      document.documentElement.setAttribute('data-theme', theme);
+      updateToggleButton(theme);
     }
-    toggleBtn.addEventListener('click', () => {
-      let theme = document.documentElement.getAttribute('data-theme');
-      if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
+    
+    // Update button text
+    function updateToggleButton(theme) {
+      if (toggleBtn) {
+        toggleBtn.innerHTML = theme === 'dark' ? 
+          '<i class="bi bi-sun-fill"></i> Light' : 
+          '<i class="bi bi-moon-fill"></i> Dark';
+      }
+    }
+    
+    // Toggle theme
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateToggleButton(newTheme);
+    }
+    
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', initTheme);
+    
+    // Add event listener
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', toggleTheme);
+    }
+    
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        const theme = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        updateToggleButton(theme);
       }
     });
   </script>
