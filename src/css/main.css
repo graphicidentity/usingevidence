@@ -1,20 +1,25 @@
 /* ===========================
    Theme Variables
    =========================== */
-:root {
-  --bg-color: #ffffff;
-  --text-color: #121212;
-  --accent-color: hsl(237, 100%, 57%);
-  --secondary-bg: #f5f5f5;
-  --muted-text: #555;
+
+/* Light theme (default) */
+html[data-theme="light"] {
+  --hero-overlay: rgba(0, 0, 0, 0.7);
+  --hero-text: #fff;
+  --hero-subtext: #ccc;
+  --hero-btn-bg: var(--accent-color);
+  --hero-btn-text: #fff;
+  --hero-btn-hover: #e64a19;
 }
 
-[data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --accent-color: hsl(237, 100%, 57%);
-  --secondary-bg: #1f1f1f;
-  --muted-text: #bbb;
+/* Dark theme */
+html[data-theme="dark"] {
+  --hero-overlay: rgba(255, 255, 255, 0.7);
+  --hero-text: #000;
+  --hero-subtext: #333;
+  --hero-btn-bg: #000;
+  --hero-btn-text: #fff;
+  --hero-btn-hover: #444;
 }
 
 /* ===========================
@@ -61,50 +66,46 @@ html, body {
    =========================== */
 .hero, .home-hero {
   position: relative;
-  /* Remove fixed height */
-  /* height: 50vh; */
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  /* Use padding instead of fixed height */
-  padding: 3rem 1rem;   /* adjust top/bottom spacing as needed */
+  padding: 3rem 1rem;
 
   background: linear-gradient(
-      rgba(0, 0, 0, 0.7), 
-      rgba(0, 0, 0, 0.7)
+      var(--hero-overlay), 
+      var(--hero-overlay)
     ),
     url('images/hero-bg.jpg') center/cover no-repeat;
-  color: #fff;
+  color: var(--hero-text);
 }
 
 .hero h1, .home-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem); /* slightly smaller max */
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero p, .home-hero p {
-  font-size: 1.125rem; /* a bit smaller */
+  font-size: 1.125rem;
   margin-bottom: 1.5rem;
-  color: #ccc;
+  color: var(--hero-subtext);
 }
 
 .hero .btn, .home-hero .btn {
-  padding: 0.5rem 1.25rem; /* slightly smaller buttons */
+  padding: 0.5rem 1.25rem;
   border: none;
   border-radius: 4px;
-  background-color: var(--accent-color);
-  color: #fff;
+  background-color: var(--hero-btn-bg);
+  color: var(--hero-btn-text);
   font-size: 0.95rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .hero .btn:hover, .home-hero .btn:hover {
-  background-color: #e64a19;
+  background-color: var(--hero-btn-hover);
 }
 
 
