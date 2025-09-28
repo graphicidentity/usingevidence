@@ -4,6 +4,11 @@
 
 /* Light theme (default) */
 html[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #ff5722;
+  --secondary-bg: #f8f9fa;
+  --muted-text: #666666;
   --hero-overlay: rgba(0, 0, 0, 0.7);
   --hero-text: #fff;
   --hero-subtext: #ccc;
@@ -14,12 +19,17 @@ html[data-theme="light"] {
 
 /* Dark theme */
 html[data-theme="dark"] {
-  --hero-overlay: rgba(255, 255, 255, 0.7);
-  --hero-text: #000;
-  --hero-subtext: #333;
-  --hero-btn-bg: #000;
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --accent-color: #ff7043;
+  --secondary-bg: #2d2d2d;
+  --muted-text: #b0b0b0;
+  --hero-overlay: rgba(0, 0, 0, 0.8);
+  --hero-text: #fff;
+  --hero-subtext: #ccc;
+  --hero-btn-bg: var(--accent-color);
   --hero-btn-text: #fff;
-  --hero-btn-hover: #444;
+  --hero-btn-hover: #ff5722;
 }
 
 /* ===========================
@@ -36,7 +46,23 @@ html, body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.6;
+  line-height: 1.7; /* Improved line height for better readability */
+}
+
+/* Improved paragraph spacing */
+p {
+  margin-bottom: 1.25rem; /* Increased from default 1rem */
+}
+
+/* Better spacing for headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
 }
 
 /* ===========================
@@ -113,18 +139,19 @@ html, body {
    Sections
    =========================== */
 section, .content-section {
-  padding: clamp(2rem, 5vw, 4rem) 2rem;
+  padding: clamp(2.5rem, 5vw, 4.5rem) 2rem; /* Increased padding for better spacing */
+  margin-bottom: 2rem; /* Added margin between sections */
 }
 
 section h2, .content-section h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; /* Increased margin for better separation */
   color: var(--accent-color);
 }
 
 section p, .content-section p {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem auto; /* Increased bottom margin */
   color: var(--muted-text);
 }
 
@@ -133,23 +160,30 @@ section p, .content-section p {
    =========================== */
 .card {
   background-color: var(--secondary-bg);
-  border: 1px solid #333;
-  border-radius: 6px;
+  border: 1px solid var(--muted-text);
+  border-radius: 8px; /* Slightly more rounded corners */
   margin-top: 2rem;
   margin-bottom: 2rem;
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+.card:hover {
+  transform: translateY(-2px); /* Subtle hover effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
-  padding: 1.5rem;
+  padding: 2rem; /* Increased padding for better spacing */
 }
 
 .card-title {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem; /* Increased margin */
   color: var(--accent-color);
 }
 
 .card-text {
   color: var(--muted-text);
+  line-height: 1.6; /* Better line height for card text */
 }
 
 /* ===========================
@@ -158,8 +192,9 @@ section p, .content-section p {
 footer {
   background-color: var(--secondary-bg);
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 2rem; /* Increased padding */
   color: var(--muted-text);
+  margin-top: 3rem; /* Added top margin for better separation */
 }
 
 /* ===========================
