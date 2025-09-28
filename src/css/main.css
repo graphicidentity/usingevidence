@@ -542,3 +542,20 @@ a:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
+
+/* About Fred section specific spacing */
+.about-fred-cards {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-fred-cards {
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-fred-cards {
+    margin-top: 5rem;
+  }
+}
