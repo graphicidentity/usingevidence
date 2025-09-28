@@ -1,0 +1,26 @@
+# WordPress core directories
+wp-admin/
+wp-includes/
+
+# WordPress content you don’t want
+wp-content/plugins/
+wp-content/themes/
+wp-content/cache/
+wp-content/upgrade/
+
+# Common WordPress files
+*.php
+*.xml
+*.rss
+*.rdf
+*.txt
+*.log
+license.txt
+readme.html
+readme.txt
+xmlrpc.php
+
+# Feeds and extras
+feed/
+comments/
+trackback/
