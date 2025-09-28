@@ -26,8 +26,8 @@
       <div class="row">
         <div class="col-md-6">
           <small>
-            <i class="bi bi-telephone"></i> 613 252 8642 | 
-            <i class="bi bi-envelope"></i> fred@usingevidence.ca
+            <i class="bi bi-telephone" aria-hidden="true"></i> <span class="visually-hidden">Phone:</span>613 252 8642 | 
+            <i class="bi bi-envelope" aria-hidden="true"></i> <span class="visually-hidden">Email:</span>fred@usingevidence.ca
           </small>
         </div>
         <div class="col-md-6 text-md-end">
@@ -65,15 +65,20 @@
           </li>
           <li class="nav-item ms-lg-3">
             <!-- Theme Toggle Button -->
-            <button id="theme-toggle" class="btn btn-sm btn-outline-secondary">Toggle Theme</button>
+            <button id="theme-toggle" class="btn btn-sm btn-outline-secondary" aria-label="Toggle between light and dark theme">
+              <span class="visually-hidden">Current theme: </span>Toggle Theme
+            </button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Skip to main content link for keyboard users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Main Content -->
-  <main>
+  <main id="main-content" role="main">
     {{ content | safe }}
   </main>
 
@@ -114,12 +119,18 @@
       updateToggleButton(theme);
     }
     
-    // Update button text
+    // Update button text and accessibility attributes
     function updateToggleButton(theme) {
       if (toggleBtn) {
-        toggleBtn.innerHTML = theme === 'dark' ? 
-          '<i class="bi bi-sun-fill"></i> Light' : 
-          '<i class="bi bi-moon-fill"></i> Dark';
+        const isLight = theme === 'light';
+        toggleBtn.innerHTML = isLight ? 
+          '<i class="bi bi-moon-fill" aria-hidden="true"></i> <span class="visually-hidden">Switch to </span>Dark' : 
+          '<i class="bi bi-sun-fill" aria-hidden="true"></i> <span class="visually-hidden">Switch to </span>Light';
+        
+        // Update aria-label for better screen reader support
+        toggleBtn.setAttribute('aria-label', 
+          `Switch to ${isLight ? 'dark' : 'light'} theme. Current theme is ${theme}.`
+        );
       }
     }
     
