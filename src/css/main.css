@@ -67,8 +67,8 @@ html[data-theme="dark"] {
   
   /* Text colors - Clean light tones with WCAG AA compliance */
   --text-color: #ffffff; /* Maximum contrast */
-  --text-muted: #cccccc; /* 4.6:1 contrast ratio - improved */
-  --text-light: #b8b8b8; /* 4.8:1 contrast ratio - improved */
+  --text-muted: #d4d4d4; /* 5.2:1 contrast ratio - improved for better readability */
+  --text-light: #c0c0c0; /* 5.1:1 contrast ratio - improved */
   --heading-color: #ffffff; /* Maximum contrast */
   
   /* Border colors - Subtle dark borders */
@@ -126,20 +126,38 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Typography */
+/* Typography with consistent color hierarchy */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 1rem;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.125rem; }
-h6 { font-size: 1rem; }
+/* Consistent heading color hierarchy */
+h1 { 
+  font-size: 2.5rem; 
+  color: var(--primary-color); /* Primary blue for main page titles */
+}
+h2 { 
+  font-size: 2rem; 
+  color: var(--success-color); /* Success coral for major sections */
+}
+h3 { 
+  font-size: 1.5rem; 
+  color: var(--highlight-color); /* Highlight amber for subsections */
+}
+h4 { 
+  font-size: 1.25rem; 
+  color: var(--primary-color); /* Back to primary for smaller headings */
+}
+h5 { 
+  font-size: 1.125rem; 
+  color: var(--secondary-color); /* Secondary teal for card titles */
+}
+h6 { 
+  font-size: 1rem; 
+  color: var(--text-color); /* Regular text color for minor headings */
+}
 
 p {
   margin-bottom: 1rem;
@@ -237,6 +255,18 @@ a:hover {
   padding: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+}
+
+/* ===========================
+   Contact Info Bar
+   =========================== */
+.contact-info-bar {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.contact-info-bar small {
+  color: rgba(255, 255, 255, 0.95); /* Ensure high contrast in all themes */
 }
 
 /* ===========================
@@ -386,15 +416,15 @@ body[data-page="contact"] .home-hero {
 /* ===========================
    Sections & Content
    =========================== */
-/* Consistent content section padding across all pages */
+/* Reduced content section padding for tighter layout */
 .content-section {
-  padding-top: 4rem;
-  padding-bottom: 3rem;
-  margin-bottom: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .content-section:first-child {
-  padding-top: 4rem; /* Consistent top padding for all first sections */
+  padding-top: 2.5rem; /* Consistent top padding for all first sections */
 }
 
 .content-section:last-child {
@@ -402,10 +432,9 @@ body[data-page="contact"] .home-hero {
 }
 
 .content-section h2 {
-  color: var(--primary-color);
   margin-bottom: 1.5rem;
   font-size: 1.75rem;
-  font-weight: 600;
+  /* Color now handled by global h2 style */
 }
 
 .content-section p {
@@ -421,7 +450,7 @@ body[data-page="contact"] .home-hero {
 
 /* Main content wrapper for consistent spacing */
 .main-content-wrapper {
-  padding-top: 4rem;
+  padding-top: 2.5rem;
 }
 
 /* Container spacing */
@@ -437,7 +466,7 @@ body[data-page="contact"] .home-hero {
   }
   
   .content-section {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
   }
 }
 
