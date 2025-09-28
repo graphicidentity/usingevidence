@@ -20,4 +20,3 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     templateFormats: ["md", "njk", "html"]
   };
-};
