@@ -57,15 +57,20 @@ html, body {
 }
 
 /* ===========================
-   Hero Banner
+   Hero Banner (refined)
    =========================== */
 .hero, .home-hero {
   position: relative;
-  height: 50vh;
+  /* Remove fixed height */
+  /* height: 50vh; */
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  /* Use padding instead of fixed height */
+  padding: 3rem 1rem;   /* adjust top/bottom spacing as needed */
 
   background: linear-gradient(
       rgba(0, 0, 0, 0.7), 
@@ -76,24 +81,24 @@ html, body {
 }
 
 .hero h1, .home-hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3rem); /* slightly smaller max */
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero p, .home-hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  font-size: 1.125rem; /* a bit smaller */
+  margin-bottom: 1.5rem;
   color: #ccc;
 }
 
 .hero .btn, .home-hero .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.25rem; /* slightly smaller buttons */
   border: none;
   border-radius: 4px;
   background-color: var(--accent-color);
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -101,6 +106,7 @@ html, body {
 .hero .btn:hover, .home-hero .btn:hover {
   background-color: #e64a19;
 }
+
 
 /* ===========================
    Sections
