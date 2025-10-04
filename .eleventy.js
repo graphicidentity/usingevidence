@@ -6,6 +6,9 @@ module.exports = function(eleventyConfig) {
   // Copy images
   eleventyConfig.addPassthroughCopy("src/images");
   
+  // Copy PDF files
+  eleventyConfig.addPassthroughCopy("pdf_downloads");
+  
   // Copy robots.txt
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   
