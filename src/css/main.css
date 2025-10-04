@@ -696,6 +696,43 @@ html[data-theme="dark"] .card-about-fred {
   font-size: 0.875rem;
 }
 
+/* Dark mode button text color overrides for improved contrast */
+html[data-theme="dark"] .btn-primary {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-primary:hover {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-outline-primary:hover {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-accent {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-accent:hover {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-success {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-success:hover {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-highlight {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-highlight:hover {
+  color: #212529;
+}
+
 /* ===========================
    Theme Toggle Button
    =========================== */
