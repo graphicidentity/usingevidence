@@ -567,6 +567,7 @@ body[data-page="contact"] .home-hero {
 /* About Fred card with accessible blue background */
 .card-about-fred {
   background-color: #e8f1f5; /* Light blue with high contrast for light mode */
+  margin-top: 2.5rem;
 }
 
 html[data-theme="dark"] .card-about-fred {
