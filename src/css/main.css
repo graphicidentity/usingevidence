@@ -15,8 +15,8 @@ html[data-theme="light"] {
   /* Complementary colors for information hierarchy */
   --success-color: #d4755a; /* Warm coral - 4.6:1 contrast on white */
   --success-hover: #b8643c;
-  --highlight-color: #c7965c; /* Warm amber - 4.8:1 contrast on white */
-  --highlight-hover: #a67c45;
+  --highlight-color: #2D5467; /* Dark blue-gray for About Fred card - high contrast with white text */
+  --highlight-hover: #1e3a4a;
   
   /* Background colors - Clean neutrals */
   --bg-color: #ffffff;
@@ -56,8 +56,8 @@ html[data-theme="dark"] {
   /* Complementary colors for dark mode */
   --success-color: #e68a75; /* Lighter coral for dark backgrounds - 4.5:1 contrast */
   --success-hover: #d4755a;
-  --highlight-color: #dbb06f; /* Lighter amber for dark backgrounds - 4.7:1 contrast */
-  --highlight-hover: #c7965c;
+  --highlight-color: #5a8a93; /* Lighter blue-gray for dark backgrounds - good contrast with white text */
+  --highlight-hover: #6ba8ac;
   
   /* Background colors - Rich dark grays */
   --bg-color: #1a1a1a;
