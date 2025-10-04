@@ -592,10 +592,6 @@ html[data-theme="dark"] .card-about-fred {
 }
 
 /* Publication Stats card - ensure white text in dark mode for better contrast */
-html[data-theme="dark"] .card-stats .card-title {
-  color: #ffffff !important;
-}
-
 html[data-theme="dark"] .card-stats strong {
   color: #ffffff;
 }
