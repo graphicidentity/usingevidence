@@ -269,6 +269,11 @@ a:hover {
   color: rgba(255, 255, 255, 0.95); /* Ensure high contrast in all themes */
 }
 
+/* Dark mode specific background color for contact info bar */
+html[data-theme="dark"] .contact-info-bar {
+  background-color: #2f4654;
+}
+
 /* ===========================
    Navigation
    =========================== */
