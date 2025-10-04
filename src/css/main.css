@@ -28,7 +28,7 @@ html[data-theme="light"] {
   --text-color: #353535; /* 7.4:1 contrast ratio on white background */
   --text-muted: #5c5c5c; /* 4.5:1 contrast ratio - improved from original */
   --text-light: #737373; /* 4.7:1 contrast ratio - improved from original */
-  --heading-color: #284b63; /* 8.2:1 contrast ratio */
+  --heading-color: #2e5467; /* Updated heading color for light mode */
   
   /* Border colors - Subtle grays */
   --border-color: #d9d9d9;
@@ -69,7 +69,7 @@ html[data-theme="dark"] {
   --text-color: #ffffff; /* Maximum contrast */
   --text-muted: #d4d4d4; /* 5.2:1 contrast ratio - improved for better readability */
   --text-light: #c0c0c0; /* 5.1:1 contrast ratio - improved */
-  --heading-color: #ffffff; /* Maximum contrast */
+  --heading-color: #93a9b2; /* Updated heading color for dark mode */
   
   /* Border colors - Subtle dark borders */
   --border-color: #4a4a4a;
@@ -136,27 +136,27 @@ h1, h2, h3, h4, h5, h6 {
 /* Consistent heading color hierarchy */
 h1 { 
   font-size: 2.5rem; 
-  color: var(--primary-color); /* Primary blue for main page titles */
+  color: var(--heading-color); /* Updated to use heading-color variable */
 }
 h2 { 
   font-size: 2rem; 
-  color: var(--success-color); /* Success coral for major sections */
+  color: var(--heading-color); /* Updated to use heading-color variable */
 }
 h3 { 
   font-size: 1.5rem; 
-  color: var(--highlight-color); /* Highlight amber for subsections */
+  color: var(--heading-color); /* Updated to use heading-color variable */
 }
 h4 { 
   font-size: 1.25rem; 
-  color: var(--primary-color); /* Back to primary for smaller headings */
+  color: var(--heading-color); /* Updated to use heading-color variable */
 }
 h5 { 
   font-size: 1.125rem; 
-  color: var(--secondary-color); /* Secondary teal for card titles */
+  color: var(--heading-color); /* Updated to use heading-color variable */
 }
 h6 { 
   font-size: 1rem; 
-  color: var(--text-color); /* Regular text color for minor headings */
+  color: var(--heading-color); /* Updated to use heading-color variable */
 }
 
 p {
@@ -507,6 +507,23 @@ body[data-page="contact"] .home-hero {
 
 .card-text:last-child {
   margin-bottom: 0;
+}
+
+/* About Fred card with accessible blue background */
+.card-about-fred {
+  background-color: #e8f1f5; /* Light blue with high contrast for light mode */
+}
+
+html[data-theme="dark"] .card-about-fred {
+  background-color: #1e3a4a; /* Dark blue with high contrast for dark mode */
+}
+
+.card-about-fred .card-title {
+  color: var(--heading-color);
+}
+
+.card-about-fred .card-text {
+  color: var(--text-color);
 }
 
 /* ===========================
