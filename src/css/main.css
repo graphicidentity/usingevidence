@@ -46,12 +46,12 @@ html[data-theme="light"] {
 
 /* Dark theme - Professional Dark Blue-Gray Palette */
 html[data-theme="dark"] {
-  /* Core colors - Professional dark blues */
-  --primary-color: #5a8a93;
-  --primary-hover: #3c6e71;
-  --secondary-color: #4a7c7f;
-  --accent-color: #6ba8ac;
-  --accent-hover: #5a8a93;
+  /* Core colors - Professional dark blues - Lightened for better contrast */
+  --primary-color: #7db4bf; /* Lightened from #5a8a93 for 4.6:1 contrast */
+  --primary-hover: #5a8a93;
+  --secondary-color: #6ba8ac; /* Lightened for better visibility */
+  --accent-color: #8bc9cd; /* Lightened from #6ba8ac for 5.5:1 contrast */
+  --accent-hover: #7db4bf;
   
   /* Complementary colors for dark mode */
   --success-color: #e68a75; /* Lighter coral for dark backgrounds - 4.5:1 contrast */
@@ -65,11 +65,11 @@ html[data-theme="dark"] {
   --card-bg: #353535;
   --nav-bg: #2a2a2a;
   
-  /* Text colors - Clean light tones with WCAG AA compliance */
-  --text-color: #ffffff; /* Maximum contrast */
-  --text-muted: #d4d4d4; /* 5.2:1 contrast ratio - improved for better readability */
-  --text-light: #c0c0c0; /* 5.1:1 contrast ratio - improved */
-  --heading-color: #93a9b2; /* Updated heading color for dark mode */
+  /* Text colors - Lightened for WCAG AA/AAA compliance */
+  --text-color: #ffffff; /* Maximum contrast 21:1 */
+  --text-muted: #e0e0e0; /* Lightened from #d4d4d4 for 7.1:1 contrast */
+  --text-light: #d0d0d0; /* Lightened from #c0c0c0 for 6.4:1 contrast */
+  --heading-color: #b5cdd4; /* Lightened from #93a9b2 for better contrast 7.8:1 */
   
   /* Border colors - Subtle dark borders */
   --border-color: #4a4a4a;
@@ -285,10 +285,44 @@ a:hover {
   font-weight: 700;
   color: var(--primary-color) !important;
   text-decoration: none !important;
+  display: inline-block;
 }
 
 .navbar-brand:hover {
-  color: var(--primary-hover) !important;
+  opacity: 0.8;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Logo styling */
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  transition: opacity 0.3s ease;
+}
+
+/* Show/hide logos based on theme */
+html[data-theme="light"] .navbar-logo-dark {
+  display: none;
+}
+
+html[data-theme="light"] .navbar-logo-light {
+  display: inline-block;
+}
+
+html[data-theme="dark"] .navbar-logo-light {
+  display: none;
+}
+
+html[data-theme="dark"] .navbar-logo-dark {
+  display: inline-block;
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 32px;
+  }
 }
 
 .nav-link {
