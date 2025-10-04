@@ -374,7 +374,8 @@ html[data-theme="dark"] .navbar-logo-dark {
 
 /* Home Page Hero - Modern gradient pattern */
 body[data-page="home"] .home-hero {
-  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
               radial-gradient(circle at 25% 25%, #3c6e71 0%, transparent 50%),
               radial-gradient(circle at 75% 75%, #284b63 0%, transparent 50%),
               linear-gradient(135deg, #284b63 0%, #3c6e71 50%, #353535 100%);
@@ -382,7 +383,8 @@ body[data-page="home"] .home-hero {
 
 /* About Fred Page Hero - Professional diagonal pattern */
 body[data-page="about-fred"] .home-hero {
-  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
               linear-gradient(45deg, #284b63 0%, transparent 25%),
               linear-gradient(-45deg, #3c6e71 25%, transparent 50%),
               linear-gradient(135deg, #353535 0%, #284b63 100%);
@@ -390,27 +392,30 @@ body[data-page="about-fred"] .home-hero {
 
 /* Publications Page Hero - Clean document texture */
 body[data-page="publications"] .home-hero {
-  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
               repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(60, 110, 113, 0.1) 2px, rgba(60, 110, 113, 0.1) 4px),
               linear-gradient(90deg, #284b63 0%, #3c6e71 50%, #353535 100%);
 }
 
 /* Clients Page Hero - Network/connection pattern */
 body[data-page="clients-and-partnerships"] .home-hero {
-  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
               radial-gradient(circle at 20% 20%, rgba(60, 110, 113, 0.3) 1px, transparent 1px),
               radial-gradient(circle at 80% 80%, rgba(40, 75, 99, 0.3) 1px, transparent 1px),
               linear-gradient(120deg, #284b63 0%, #3c6e71 100%);
-  background-size: 30px 30px, 40px 40px, 100% 100%;
+  background-size: cover, auto, 30px 30px, 40px 40px, 100% 100%;
 }
 
 /* Contact Page Hero - Geometric professional pattern */
 body[data-page="contact"] .home-hero {
-  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
               linear-gradient(60deg, transparent 40%, rgba(60, 110, 113, 0.1) 40%, rgba(60, 110, 113, 0.1) 60%, transparent 60%),
               linear-gradient(-60deg, transparent 40%, rgba(40, 75, 99, 0.1) 40%, rgba(40, 75, 99, 0.1) 60%, transparent 60%),
               linear-gradient(45deg, #284b63 0%, #3c6e71 100%);
-  background-size: 60px 60px, 60px 60px, 100% 100%;
+  background-size: cover, auto, 60px 60px, 60px 60px, 100% 100%;
 }
 
 /* Subtle texture overlay for all heroes */
