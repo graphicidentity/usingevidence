@@ -508,6 +508,15 @@ body[data-page="contact"] .home-hero {
   padding-top: 2.5rem;
 }
 
+/* Align sidebar cards with main content top */
+.main-content-wrapper > .row > [class*="col-"] > .content-section:first-child {
+  padding-top: 0;
+}
+
+.main-content-wrapper > .row > [class*="col-"] > .sticky-top {
+  padding-top: 0;
+}
+
 /* Container spacing */
 .container {
   padding-left: 1.5rem;
@@ -580,6 +589,19 @@ html[data-theme="dark"] .card-about-fred {
 
 .card-about-fred .card-text {
   color: var(--text-color);
+}
+
+/* Publication Stats card - ensure white text in dark mode for better contrast */
+html[data-theme="dark"] .card-stats .card-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .card-stats strong {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .card-stats li {
+  color: #ffffff;
 }
 
 /* ===========================
