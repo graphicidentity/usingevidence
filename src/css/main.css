@@ -803,6 +803,10 @@ footer p {
   color: var(--primary-color) !important;
 }
 
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
 .text-muted {
   color: var(--text-muted) !important;
 }
