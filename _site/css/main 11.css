@@ -1,0 +1,929 @@
+/* ===========================
+   Theme Variables
+   =========================== */
+
+/* Light theme (default) - Professional Blue-Gray Palette */
+:root,
+html[data-theme="light"] {
+  /* Core colors - Professional blue-grays */
+  --primary-color: #284b63;
+  --primary-hover: #1e3a4a;
+  --secondary-color: #3c6e71;
+  --accent-color: #3c6e71;
+  --accent-hover: #2d5356;
+  
+  /* Complementary colors for information hierarchy */
+  --success-color: #d4755a; /* Warm coral - 4.6:1 contrast on white */
+  --success-hover: #b8643c;
+  --highlight-color: #2D5467; /* Dark blue-gray for About Fred card - high contrast with white text */
+  --highlight-hover: #1e3a4a;
+  
+  /* Background colors - Clean neutrals */
+  --bg-color: #ffffff;
+  --secondary-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --nav-bg: #ffffff;
+  
+  /* Text colors - Professional grays with WCAG AA compliance */
+  --text-color: #353535; /* 7.4:1 contrast ratio on white background */
+  --text-muted: #5c5c5c; /* 4.5:1 contrast ratio - improved from original */
+  --text-light: #737373; /* 4.7:1 contrast ratio - improved from original */
+  --heading-color: #2e5467; /* Updated heading color for light mode */
+  
+  /* Border colors - Subtle grays */
+  --border-color: #d9d9d9;
+  --border-light: #e9ecef;
+  
+  /* Shadow - Clean shadows */
+  --shadow: 0 1px 3px 0 rgb(53 53 53 / 0.1), 0 1px 2px -1px rgb(53 53 53 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(53 53 53 / 0.1), 0 4px 6px -4px rgb(53 53 53 / 0.1);
+  
+  /* Hero specific */
+  --hero-overlay: rgba(40, 75, 99, 0.75);
+  --hero-text: #ffffff;
+  --hero-text-muted: #e9ecef;
+}
+
+/* Dark theme - Professional Dark Blue-Gray Palette */
+html[data-theme="dark"] {
+  /* Core colors - Professional dark blues - Lightened for better contrast */
+  --primary-color: #7db4bf; /* Lightened from #5a8a93 for 4.6:1 contrast */
+  --primary-hover: #5a8a93;
+  --secondary-color: #6ba8ac; /* Lightened for better visibility */
+  --accent-color: #8bc9cd; /* Lightened from #6ba8ac for 5.5:1 contrast */
+  --accent-hover: #7db4bf;
+  
+  /* Complementary colors for dark mode */
+  --success-color: #e68a75; /* Lighter coral for dark backgrounds - 4.5:1 contrast */
+  --success-hover: #d4755a;
+  --highlight-color: #5a8a93; /* Lighter blue-gray for dark backgrounds - good contrast with white text */
+  --highlight-hover: #6ba8ac;
+  
+  /* Background colors - Rich dark grays */
+  --bg-color: #1a1a1a;
+  --secondary-bg: #2a2a2a;
+  --card-bg: #353535;
+  --nav-bg: #2a2a2a;
+  
+  /* Text colors - Lightened for WCAG AA/AAA compliance */
+  --text-color: #ffffff; /* Maximum contrast 21:1 */
+  --text-muted: #e0e0e0; /* Lightened from #d4d4d4 for 7.1:1 contrast */
+  --text-light: #d0d0d0; /* Lightened from #c0c0c0 for 6.4:1 contrast */
+  --heading-color: #b5cdd4; /* Lightened from #93a9b2 for better contrast 7.8:1 */
+  
+  /* Border colors - Subtle dark borders */
+  --border-color: #4a4a4a;
+  --border-light: #3a3a3a;
+  
+  /* Shadow - Deep clean shadows */
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  
+  /* Hero specific */
+  --hero-overlay: rgba(40, 75, 99, 0.6);
+  --hero-text: #ffffff;
+  --hero-text-muted: #d9d9d9;
+}
+
+/* ===========================
+   Global Reset & Base Styles
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Skip link for keyboard accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 0.95rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography with consistent color hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+/* Consistent heading color hierarchy */
+h1 { 
+  font-size: 2.5rem; 
+  color: var(--heading-color); /* Updated to use heading-color variable */
+}
+h2 { 
+  font-size: 2rem; 
+  color: var(--heading-color); /* Updated to use heading-color variable */
+}
+h3 { 
+  font-size: 1.5rem; 
+  color: var(--heading-color); /* Updated to use heading-color variable */
+}
+h4 { 
+  font-size: 1.25rem; 
+  color: var(--heading-color); /* Updated to use heading-color variable */
+}
+h5 { 
+  font-size: 1.125rem; 
+  color: var(--heading-color); /* Updated to use heading-color variable */
+}
+h6 { 
+  font-size: 1rem; 
+  color: var(--heading-color); /* Updated to use heading-color variable */
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline; /* Always underline for accessibility */
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration-thickness: 2px;
+}
+
+/* High contrast link variant for better accessibility */
+.content-section a {
+  font-weight: 500; /* Slightly bolder for better visibility */
+}
+
+/* ===========================
+   Complementary Color Classes
+   =========================== */
+
+/* Success/Positive information styling */
+.text-success {
+  color: var(--success-color) !important;
+}
+
+.bg-success {
+  background-color: var(--success-color) !important;
+  color: white;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: var(--success-hover);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.border-success {
+  border-color: var(--success-color) !important;
+}
+
+/* Highlight/Warning information styling */
+.text-highlight {
+  color: var(--highlight-color) !important;
+}
+
+.bg-highlight {
+  background-color: var(--highlight-color) !important;
+  color: white;
+}
+
+.btn-highlight {
+  background-color: var(--highlight-color);
+  color: white;
+  border: none;
+}
+
+.btn-highlight:hover {
+  background-color: var(--highlight-hover);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.border-highlight {
+  border-color: var(--highlight-color) !important;
+}
+
+/* Alert/Notification boxes using complementary colors */
+.alert-success {
+  background-color: rgba(212, 117, 90, 0.1);
+  border: 1px solid var(--success-color);
+  color: var(--success-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.alert-highlight {
+  background-color: rgba(199, 150, 92, 0.1);
+  border: 1px solid var(--highlight-color);
+  color: var(--highlight-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   Contact Info Bar
+   =========================== */
+.contact-info-bar {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.contact-info-bar small {
+  color: rgba(255, 255, 255, 0.95); /* Ensure high contrast in all themes */
+}
+
+/* Dark mode specific background color for contact info bar */
+html[data-theme="dark"] .contact-info-bar {
+  background-color: #2f4654;
+}
+
+/* ===========================
+   Navigation
+   =========================== */
+.navbar {
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color) !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Logo styling */
+.navbar-logo {
+  min-height: 60px;
+  height: 60px;
+  width: auto;
+  transition: opacity 0.3s ease;
+}
+
+/* Show/hide logos based on theme */
+html[data-theme="light"] .navbar-logo-dark {
+  display: none;
+}
+
+html[data-theme="light"] .navbar-logo-light {
+  display: inline-block;
+}
+
+html[data-theme="dark"] .navbar-logo-light {
+  display: none;
+}
+
+html[data-theme="dark"] .navbar-logo-dark {
+  display: inline-block;
+}
+
+/* Responsive logo sizing */
+/* Tablet view */
+@media (max-width: 768px) {
+  .navbar-logo {
+    min-height: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+  .navbar-logo {
+    min-height: 25px;
+    height: 25px;
+  }
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Contact info bar */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-primary .bi {
+  margin-right: 0.25rem;
+}
+
+/* ===========================
+   Hero Section - Page Specific Backgrounds
+   =========================== */
+
+/* Base Hero Styles */
+.home-hero {
+  color: var(--hero-text);
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Home Page Hero - Modern gradient pattern */
+body[data-page="home"] .home-hero {
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+              radial-gradient(circle at 25% 25%, #3c6e71 0%, transparent 50%),
+              radial-gradient(circle at 75% 75%, #284b63 0%, transparent 50%),
+              linear-gradient(135deg, #284b63 0%, #3c6e71 50%, #353535 100%);
+}
+
+/* About Fred Page Hero - Professional diagonal pattern */
+body[data-page="about-fred"] .home-hero {
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+              linear-gradient(45deg, #284b63 0%, transparent 25%),
+              linear-gradient(-45deg, #3c6e71 25%, transparent 50%),
+              linear-gradient(135deg, #353535 0%, #284b63 100%);
+}
+
+/* Publications Page Hero - Clean document texture */
+body[data-page="publications"] .home-hero {
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+              repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(60, 110, 113, 0.1) 2px, rgba(60, 110, 113, 0.1) 4px),
+              linear-gradient(90deg, #284b63 0%, #3c6e71 50%, #353535 100%);
+}
+
+/* Clients Page Hero - Network/connection pattern */
+body[data-page="clients-and-partnerships"] .home-hero {
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+              radial-gradient(circle at 20% 20%, rgba(60, 110, 113, 0.3) 1px, transparent 1px),
+              radial-gradient(circle at 80% 80%, rgba(40, 75, 99, 0.3) 1px, transparent 1px),
+              linear-gradient(120deg, #284b63 0%, #3c6e71 100%);
+  background-size: cover, auto, 30px 30px, 40px 40px, 100% 100%;
+}
+
+/* Contact Page Hero - Geometric professional pattern */
+body[data-page="contact"] .home-hero {
+  background: url('../images/paper-background.png'),
+              linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+              linear-gradient(60deg, transparent 40%, rgba(60, 110, 113, 0.1) 40%, rgba(60, 110, 113, 0.1) 60%, transparent 60%),
+              linear-gradient(-60deg, transparent 40%, rgba(40, 75, 99, 0.1) 40%, rgba(40, 75, 99, 0.1) 60%, transparent 60%),
+              linear-gradient(45deg, #284b63 0%, #3c6e71 100%);
+  background-size: cover, auto, 60px 60px, 60px 60px, 100% 100%;
+}
+
+/* Subtle texture overlay for all heroes */
+.home-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="texture" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.8" fill="white" opacity="0.08"/><circle cx="5" cy="5" r="0.4" fill="white" opacity="0.05"/><circle cx="15" cy="15" r="0.4" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23texture)"/></svg>');
+  opacity: 1;
+  pointer-events: none;
+}
+
+.home-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--hero-text);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home-hero .lead {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: 1rem;
+  color: var(--hero-text);
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.home-hero .fs-5 {
+  font-size: clamp(1rem, 2.5vw, 1.25rem) !important;
+  color: var(--hero-text-muted);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* ===========================
+   Sections & Content
+   =========================== */
+/* Reduced content section padding for tighter layout */
+.content-section {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-section:first-child {
+  padding-top: 2.5rem; /* Consistent top padding for all first sections */
+}
+
+.content-section:last-child {
+  margin-bottom: 0;
+}
+
+.content-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  /* Color now handled by global h2 style */
+}
+
+.content-section p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* Ensure consistent column alignment */
+.container .row > [class*="col-"] {
+  padding-top: 0;
+}
+
+/* Main content wrapper for consistent spacing */
+.main-content-wrapper {
+  padding-top: 2.5rem;
+}
+
+/* Align sidebar cards with main content top */
+.main-content-wrapper > .row > [class*="col-"] > .content-section:first-child {
+  padding-top: 0;
+}
+
+.main-content-wrapper > .row > [class*="col-"] > .sticky-top {
+  padding-top: 0;
+}
+
+/* Container spacing */
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .content-section {
+    padding: 2.5rem 0;
+  }
+}
+
+/* ===========================
+   Cards
+   =========================== */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+/* About Fred card with accessible blue background */
+.card-about-fred {
+  background-color: #e8f1f5; /* Light blue with high contrast for light mode */
+  margin-top: 2.5rem;
+}
+
+html[data-theme="dark"] .card-about-fred {
+  background-color: #1e3a4a; /* Dark blue with high contrast for dark mode */
+}
+
+.card-about-fred .card-title {
+  color: var(--heading-color);
+}
+
+.card-about-fred .card-text {
+  color: var(--text-color);
+}
+
+/* Publication Stats card - ensure white text in dark mode for better contrast */
+html[data-theme="dark"] .card-stats .card-title {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .card-stats strong {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .card-stats li {
+  color: #ffffff;
+}
+
+/* ===========================
+   Accordion
+   =========================== */
+.accordion {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-button {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 1.25rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--secondary-bg);
+  color: var(--accent-color);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(60, 110, 113, 0.25) !important;
+  border-color: transparent;
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: -3px;
+}
+
+.accordion-body {
+  padding: 1.5rem;
+  background-color: var(--secondary-bg);
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+.btn {
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-outline-secondary {
+  border: 2px solid var(--border-color);
+  color: var(--text-muted);
+  background: transparent;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-hover);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Dark mode button text color overrides for improved contrast */
+html[data-theme="dark"] .btn-primary {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-primary:hover {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-outline-primary:hover {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-accent {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-accent:hover {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-success {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-success:hover {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-highlight {
+  color: #212529;
+}
+
+html[data-theme="dark"] .btn-highlight:hover {
+  color: #212529;
+}
+
+/* ===========================
+   Theme Toggle Button
+   =========================== */
+#theme-toggle {
+  background: var(--secondary-bg);
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+#theme-toggle:hover {
+  background: var(--border-color);
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  background-color: var(--secondary-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
+}
+
+footer h5 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+/* ===========================
+   Utility Classes
+   =========================== */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.bg-light {
+  background-color: var(--secondary-bg) !important;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 767px) {
+  .home-hero {
+    padding: 3rem 0;
+  }
+  
+  .home-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .home-hero .lead {
+    font-size: 1.25rem;
+  }
+  
+  .content-section {
+    padding: 2rem 0;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .accordion-button {
+    padding: 1rem;
+  }
+  
+  .accordion-body {
+    padding: 1rem;
+  }
+}
+
+/* ===========================
+   Publications Page Specific
+   =========================== */
+.publication-item {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.publication-item:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.publication-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.publication-item p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.publication-item .btn {
+  margin-top: 1rem;
+}
+
+/* ===========================
+   Animation & Transitions
+   =========================== */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect user's motion preferences - WCAG 2.2 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Enhanced focus states for WCAG 2.2 compliance */
+button:focus,
+.btn:focus,
+a:focus,
+.nav-link:focus,
+.accordion-button:focus,
+.navbar-toggler:focus {
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(60, 110, 113, 0.2) !important;
+}
+
+/* Form elements focus */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(60, 110, 113, 0.2);
+}
+
+/* About Fred section specific spacing - removed as layout was restructured */
