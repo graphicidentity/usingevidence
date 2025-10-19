@@ -19,7 +19,7 @@ npm run help       # Show all commands
 |---------|----------|
 | "Missing script: serve" | Use `npm start` |
 | Server won't start | Check you're in project folder |
-| Links don't work | Use `/contact/` not `/usingevidence/contact/` |
+| Links don't work | Use `/contact/` not `/contact/` |
 | Build fails | Try `npm run rebuild` |
 
 ## File Structure

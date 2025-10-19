@@ -47,7 +47,7 @@ npm run dev
 
 #### ❌ Navigation Links Don't Work
 - **Local development**: Links use `/` paths (e.g., `/contact/`)
-- **Production**: May need `/usingevidence/` paths depending on hosting
+- **Production**: May need `/` paths depending on hosting
 - **Fix**: Update paths in `src/_layouts/base.njk` if needed
 
 #### ❌ Build Fails
@@ -63,7 +63,7 @@ npm run dev
 ## 📁 Project Structure
 
 ```
-usingevidence/
+
 ├── src/                    # Source files
 │   ├── _layouts/          # Page templates
 │   │   └── base.njk       # Main layout
